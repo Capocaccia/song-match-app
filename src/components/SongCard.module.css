@@ -1,0 +1,38 @@
+.card {
+  background: #1e1e2e;
+  border: 2px solid #7c3aed;
+  border-radius: 10px;
+  padding: 12px 18px;
+  cursor: grab;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: box-shadow 0.15s ease, opacity 0.15s ease;
+  touch-action: none;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card:hover:not(.matched) {
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.5);
+}
+
+.matched {
+  opacity: 0.4;
+  cursor: default;
+  border-color: #4ade80;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.artist {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
