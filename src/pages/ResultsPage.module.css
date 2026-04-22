@@ -1,0 +1,244 @@
+.wrapper {
+  min-height: 100vh;
+  background: #020617;
+  padding: 40px 24px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 680px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin: 0 0 6px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+.status {
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.statusError {
+  color: #f87171;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ── Leaderboard ── */
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.row {
+  display: block;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.rowSummary {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  grid-template-rows: auto 6px;
+  align-items: center;
+  column-gap: 12px;
+  padding: 14px 16px 12px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.rowSummary::-webkit-details-marker { display: none; }
+
+.row[open] .rowSummary {
+  border-bottom: 1px solid #1e293b;
+}
+
+.gold   { border-color: #ca8a04; background: #1c1500; }
+.silver { border-color: #64748b; background: #111827; }
+.bronze { border-color: #92400e; background: #150d00; }
+
+.rank {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-align: center;
+  grid-row: 1;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  grid-row: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.score {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #a78bfa;
+  grid-row: 1;
+  white-space: nowrap;
+}
+
+.total {
+  font-weight: 400;
+  color: #475569;
+  font-size: 0.85rem;
+}
+
+.barTrack {
+  grid-column: 2 / 4;
+  grid-row: 2;
+  background: #1e293b;
+  border-radius: 99px;
+  height: 6px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.barFill {
+  height: 100%;
+  background: #7c3aed;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.gold   .barFill { background: #ca8a04; }
+.silver .barFill { background: #64748b; }
+.bronze .barFill { background: #b45309; }
+
+/* ── Per-song results table ── */
+.songTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.thSong,
+.thGuess,
+.thAnswer {
+  padding: 7px 12px;
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+  border-bottom: 1px solid #1e293b;
+}
+
+.thGuess,
+.thAnswer { text-align: center; }
+
+.trCorrect { background: rgba(74, 222, 128, 0.04); }
+.trWrong   { background: transparent; }
+
+.tdSong {
+  padding: 7px 12px 7px 52px;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tdGuess,
+.tdAnswer {
+  padding: 7px 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tdAnswer { color: #e2e8f0; font-weight: 600; }
+
+.guessCorrect { color: #4ade80; font-weight: 600; }
+.guessWrong   { color: #f87171; }
+
+.resultIcon {
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+/* ── Answer Key ── */
+.answerKey {
+  margin-top: 8px;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 0;
+  background: #0f172a;
+  overflow: hidden;
+}
+
+.answerKey summary {
+  cursor: pointer;
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #94a3b8;
+  list-style: none;
+  user-select: none;
+}
+
+.answerKey summary::-webkit-details-marker { display: none; }
+
+.answerKey[open] summary {
+  border-bottom: 1px solid #1e293b;
+  color: #cbd5e1;
+}
+
+.akList {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.akItem {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 8px;
+  align-items: center;
+  padding: 7px 18px;
+  font-size: 0.82rem;
+}
+
+.akItem:nth-child(even) {
+  background: #0a0f1e;
+}
+
+.akSong {
+  color: #94a3b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.akArrow {
+  color: #334155;
+}
+
+.akUser {
+  color: #e2e8f0;
+  font-weight: 600;
+}

@@ -53,3 +53,30 @@ export const USERS: { id: string; name: string }[] = [
   { id: "user-24", name: "William VanDolah" },
   { id: "user-25", name: "Yo Andrea!" },
 ];
+
+/** Correct answer key: songId → userId */
+export const ANSWER_KEY: Record<string, string> = {
+  "song-1":  "user-2",   // Los Angeles Is Burning → Bill Naife
+  "song-2":  "user-5",   // cowboy in LA → colinbperry
+  "song-3":  "user-25",  // Viva Las Vegas (Cover) → Yo Andrea!
+  "song-4":  "user-7",   // La Grange (2005 Remaster) → David Bartosh
+  "song-5":  "user-16",  // Pink Pony Club → Jessie Paterson
+  "song-6":  "user-8",   // Havana (feat. Young Thug) → Elster
+  "song-7":  "user-11",  // Paris, Tokyo → Gerry Branch II
+  "song-8":  "user-15",  // Waterloo → Jessica Gall
+  "song-9":  "user-14",  // Hollywood Nights - Remastered 2011 → Jeff Mocini
+  "song-10": "user-17",  // End of Beginning → Kris M
+  "song-11": "user-12",  // Paradise → hannah
+  "song-12": "user-24",  // California - Tchad Blake Mix → William VanDolah
+  "song-13": "user-19",  // Moving to Brussels → Matt H
+  "song-14": "user-18",  // Algiers → Lucy B
+  "song-15": "user-21",  // London Calling - Remastered → Mike Mookie Ham
+  "song-16": "user-10",  // No Sleep Till Brooklyn → Ernie
+  "song-17": "user-3",   // Harder Than You Think → capocaccia
+  "song-18": "user-23",  // International Love (feat. Chris Brown) → Rushil
+  "song-19": "user-1",   // Choosin' Texas → amrinton87
+  "song-20": "user-13",  // Miami → Isabel M
+  "song-21": "user-6",   // Rotterdam (Or Anywhere) → Conor M
+  "song-22": "user-20",  // Save Me, San Francisco → Matt K
+  "song-23": "user-22",  // One Night in Bangkok - Vinylshakerz → Renae
+};

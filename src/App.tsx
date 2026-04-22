@@ -5,10 +5,15 @@ import type { Matches, Submission } from "./types";
 import { WelcomePage } from "./pages/WelcomePage";
 import { MatchingPage } from "./pages/MatchingPage";
 import { ThankYouPage } from "./pages/ThankYouPage";
+import { ResultsPage } from "./pages/ResultsPage";
 
 type Screen = "welcome" | "matching" | "thankyou";
 
 export default function App() {
+  if (new URLSearchParams(window.location.search).has("results")) {
+    return <ResultsPage />;
+  }
+
   const [screen, setScreen] = useState<Screen>("welcome");
   const [participantName, setParticipantName] = useState("");
   const [submitting, setSubmitting] = useState(false);
