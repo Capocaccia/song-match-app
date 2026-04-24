@@ -25,6 +25,16 @@ const userMap = Object.fromEntries(USERS.map((u) => [u.id, u.name]));
 const MEDAL = ["🥇", "🥈", "🥉"];
 
 export function ResultsPage() {
+  if (TOTAL === 0) {
+    return (
+      <div className={styles.wrapper}>
+        <div className={styles.container}>
+          <h1 className={styles.title}>🏆 Leaderboard</h1>
+          <p className={styles.status}>Results not yet available. Check back after the event!</p>
+        </div>
+      </div>
+    );
+  }
   const [results, setResults] = useState<ScoredSubmission[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
